@@ -132,8 +132,8 @@ class CalendarStripState extends State<CalendarStrip>
   void initState() {
     super.initState();
     int subtractDuration = widget.weekStartsOnSunday == true
-        ? currentDate.weekday + 1
-        : currentDate.weekday - 1;
+        ? currentDate.weekday -1
+        : currentDate.weekday;
     rowStartingDate = rowStartingDate != null
         ? rowStartingDate
         : currentDate.subtract(Duration(days: subtractDuration));
